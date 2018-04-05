@@ -1,0 +1,63 @@
+<div class="row">
+<div class="col-sm-8">
+<h3>Results</h3>        
+</div>
+<div class="col-sm-4">
+
+<div class="float-sm-right">
+        <div class="switch">
+        <label>
+        <input class="checkbox" type="checkbox" ng-model="explainScoring">Explain Scoring
+        </label>
+        </div>
+
+        <p class="float-sm-right muted">(1 - {{results.hits.length}} of {{results.total_hits}}) took {{results.roundTook}}</p>
+</div>
+
+</div>
+
+
+
+
+
+<div ng-repeat="hit in results.hits" class="card w-100">
+        <div class="card-body">
+
+                <h6 class="card-title"><span class="muted">{{ $index + 1 }}.</span>  <a href="{{ hit.fields.eis_url}}" target="_blank">{{ hit.fields["EIS Title"] }}</a> <span class="badge">{{hit.roundedScore}}</span> </h6>
+                <p ng-repeat="(fieldName, fragments) in hit.fragments" class="card-text">
+                        <strong ng-show="fragments.length > 0">{{fieldName}}: </strong>
+                        <span ng-repeat="fragment in fragments" ng-bind-html="fragment"></span>
+                </p>
+                <div class="well" ng-show="explainScoring">
+                Explanation
+                <ul><li><span ng-bind-html="hit.explanationStringSafe"></span></li></ul>
+        </div>
+        </div>
+</div>
+        <br>
+        <br>
+        <br>
+<!--     <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul> -->
+    <br>
+<!-- <ol>
+        <li ng-repeat="hit in results.hits"><b>{{hit.id}}</b> <span class="badge">{{hit.roundedScore}}</span> 
+        <div class="well">
+                <div ng-repeat="(fieldName, fragments) in hit.fragments">
+                <div ng-show="fragments.length > 0">{{fieldName}}</div>
+                <ul>
+                        <li ng-repeat="fragment in fragments" ng-bind-html="fragment"></li>
+                </ul>
+                </div>
+        </div>
+        <div class="well" ng-show="explainScoring">
+                Explanation
+                <ul><li><span ng-bind-html="hit.explanationStringSafe"></span></li></ul>
+        </div>
+        </li>
+</ol> -->

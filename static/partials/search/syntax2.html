@@ -1,0 +1,20 @@
+<!-- <h1 class="page-header">search documents</h1> -->
+<!-- <div class="spacer"></div> -->
+<input ng-model="syntax" type="text" class="form-control form-control-lg" id="searchTerm" placeholder="Search..." ng-change="searchSyntax()">
+<form class="form-inline" role="form">
+        
+        <div class="form-groupx">
+            <div class="">
+                
+            </div>
+        </div>
+        <!--
+        <div class="form-group">
+                <div class="col-sm-offset-2 col-xs-10">
+                        <button type="submit" class="btn btn-primary" ng-click="searchSyntax()">Search</button>
+                </div>
+        </div>
+        !-->
+</form>
+
+<div ng-show="results" ng-include src="'/static/partials/search/results.html'">

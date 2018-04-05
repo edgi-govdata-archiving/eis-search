@@ -1,0 +1,20 @@
+.highlight {
+	background: yellow;
+	padding:2px 2px;
+}
+
+.logo {
+	margin-top: -10px;
+	vertical-align: top
+}
+
+.debug {
+	font-family: fixed;
+}
+
+.spacer {
+  height: 100px;
+  display: block;
+  width: 100%;
+  position: fixed;
+}
