@@ -12,6 +12,7 @@ The search index is built with [bleve](https://github.com/blevesearch/bleve) (si
 - [ ] **adding facets** to the search index (to help filter results on axes like date range and specific metadata fields such as the geography for which the document is relevant
 - [ ] **better text-pre-processing and tokenization tuning** 
 - [ ] **improved document mappings** to include more relevant metadata fields and with appropriate weighting
+- [ ] **add more info to search page**
 
 #### Notes
 

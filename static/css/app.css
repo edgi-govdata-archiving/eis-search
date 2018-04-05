@@ -18,3 +18,8 @@
   width: 100%;
   position: fixed;
 }
+
+img.logo {
+  height: 50px;
+  width: auto;
+}
