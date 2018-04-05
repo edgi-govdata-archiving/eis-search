@@ -190,8 +190,7 @@
 [[projects]]
   name = "github.com/couchbase/ghistogram"
   packages = ["."]
-  revision = "c3b86badab3bc1aeadfecf66d6d4e45c82c43ef3"
-  version = "v0.0.0"
+  revision = "d910dd063dd68fb4d2a1ba344440f834ebb4ef62"
 
 [[projects]]
   branch = "master"
@@ -358,6 +357,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "5753b4009154b3901e52132d9c2f567f6b4e24df56f1ca57c32646760ae514aa"
+  inputs-digest = "cabd8236e67acfa91a97ac56f74e8b62c6aa691bd2936e645860340d4414d705"
   solver-name = "gps-cdcl"
   solver-version = 1

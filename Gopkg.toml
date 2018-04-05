@@ -33,11 +33,16 @@
   name = "github.com/gorilla/mux"
   version = "1.6.1"
 
+[[override]]
+  name = "github.com/couchbase/ghistogram"
+  revision = "d910dd063dd68fb4d2a1ba344440f834ebb4ef62"
+
 [prune]
   go-tests = true
   unused-packages = true
 
 [metadata.heroku]
   root-package = "github.com/edgi-govdata-archiving/eis-search"
-  go-version = "1.10.0"
+  go-version = "go1.10"
   install = [ "./..." ]
+  ensure = "false"
