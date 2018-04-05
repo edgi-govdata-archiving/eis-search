@@ -21,7 +21,7 @@ import (
 )
 
 var batchSize = flag.Int("batchSize", 100, "batch size for indexing")
-var bindAddr = flag.String("addr", ":8094", "http listen address")
+var bindAddr = flag.String("addr", "8094", "http listen address")
 
 //var jsonDir = flag.String("jsonDir", "data/", "json directory")
 // var jsonDir = flag.String("jsonDir", "/Volumes/LaCie/wikitables/bleve/", "json directory")
@@ -33,6 +33,10 @@ var cpuprofile = flag.String("cpuprofile", "", "write cpu profile to file")
 var memprofile = flag.String("memprofile", "", "write mem profile to file")
 
 func main() {
+	port := os.Getenv("PORT")
+	if port != "" {
+		*bindAddr = port
+	}
 
 	flag.Parse()
 
@@ -98,8 +102,8 @@ func main() {
 
 	// start the HTTP server
 	http.Handle("/", router)
-	log.Printf("Listening on %v", *bindAddr)
-	log.Fatal(http.ListenAndServe(*bindAddr, nil))
+	log.Printf("Listening on %v", ":"+*bindAddr)
+	log.Fatal(http.ListenAndServe(":"+*bindAddr, nil))
 }
 
 func indexDocs(i bleve.Index) error {
