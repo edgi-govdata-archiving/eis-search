@@ -2,7 +2,9 @@
 
 ### About
 
-This app makes an archive of the EPA's Environmental Impact Statements (EIS) searchable.
+This app makes an archive of the EPA's Environmental Impact Statements (EIS) searchable, linking results back to EIS documents on epa.gov
+
+**demo:** https://eis-search.herokuapp.com
 
 The search index is built with [bleve](https://github.com/blevesearch/bleve) (similar to a light-weight elasticsearch and written in golang) using metadata extracted from every reachable EIS url (including text extracted with OCR from attached/associated PDFs)
 
