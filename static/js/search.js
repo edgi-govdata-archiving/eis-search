@@ -23,7 +23,7 @@ function SearchCtrl($scope, $http, $routeParams, $log, $sce) {
     var resetForm = function() {
             $scope.clauses = [];
             $scope.phraseTerms = [];
-            $scope.size = "10";
+            $scope.size = "1000";
             $scope.minShould = "0";
             resetSchema();
     };
@@ -43,7 +43,7 @@ function SearchCtrl($scope, $http, $routeParams, $log, $sce) {
 
     $scope.searchTerm = function() {
         $http.post('/api/search', {
-			"size": 10,
+			"size": 1000,
 			"explain": true,
 			"highlight":{},
 			"query": {
@@ -61,7 +61,7 @@ function SearchCtrl($scope, $http, $routeParams, $log, $sce) {
 
     $scope.searchPrefix = function() {
         $http.post('/api/search', {
-            "size": 10,
+            "size": 1000,
             "explain": true,
             "highlight":{},
             "query": {
@@ -79,7 +79,7 @@ function SearchCtrl($scope, $http, $routeParams, $log, $sce) {
 
     $scope.searchNumericRange = function() {
         $http.post('/api/search', {
-            "size": 10,
+            "size": 1000,
             "explain": true,
             "highlight":{},
             "query": {
@@ -100,7 +100,7 @@ function SearchCtrl($scope, $http, $routeParams, $log, $sce) {
 
     $scope.searchDateRange = function() {
         $http.post('/api/search', {
-            "size": 10,
+            "size": 1000,
             "explain": true,
             "highlight":{},
             "query": {
@@ -121,7 +121,7 @@ function SearchCtrl($scope, $http, $routeParams, $log, $sce) {
 
     $scope.searchMatch = function() {
         $http.post('/api/search', {
-            "size": 10,
+            "size": 1000,
             "explain": true,
             "highlight":{},
             "query": {
@@ -142,7 +142,7 @@ function SearchCtrl($scope, $http, $routeParams, $log, $sce) {
 
     $scope.searchMatchPhrase = function() {
         $http.post('/api/search', {
-            "size": 10,
+            "size": 1000,
             "explain": true,
             "highlight":{},
             "query": {
@@ -161,7 +161,7 @@ function SearchCtrl($scope, $http, $routeParams, $log, $sce) {
 
     $scope.searchSyntax = function() {
         $http.post('/api/search', {
-            "size": 10,
+            "size": 1000,
             "from": 0,
             "explain": true,
             "highlight":{},
