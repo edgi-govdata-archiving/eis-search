@@ -6,7 +6,8 @@ This app makes an archive of the EPA's Environmental Impact Statements (EIS) sea
 
 #### Notes
 
-The current version of the web app is configured to make requests as the user types, but does not have any auto-complete functionality, so you may have zero results showing up when you are halfway through typing a given word.
+* The current version of the web app is configured to make requests as the user types, but does not have any auto-complete functionality, so you may have zero results showing up when you are halfway through typing a given word.
+* The database currently used by this tool is a non-updating snapshot of records found on the [EPA's EIS Database](https://cdxnodengn.epa.gov/cdx-enepa-public/action/eis/search)
 
 ### Future Enhancements
 
