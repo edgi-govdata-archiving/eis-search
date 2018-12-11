@@ -1,12 +1,13 @@
 # EIS Document Database Search
 
-### About
-
 This app makes an archive of the EPA's Environmental Impact Statements (EIS) searchable, linking results back to EIS documents on epa.gov
 
-**demo:** https://eis-search.herokuapp.com
+**Try the EIS Search Tool (demo):** https://eis-search.herokuapp.com
 
-The search index is built with [bleve](https://github.com/blevesearch/bleve) (similar to a light-weight elasticsearch and written in golang) using metadata extracted from every reachable EIS url (including text extracted with OCR from attached/associated PDFs)
+#### Notes
+
+* The current version of the web app is configured to make requests as the user types, but does not have any auto-complete functionality, so you may have zero results showing up when you are halfway through typing a given word.
+* The database currently used by this tool is a non-updating snapshot of records found on the [EPA's EIS Database](https://cdxnodengn.epa.gov/cdx-enepa-public/action/eis/search)
 
 ### Future Enhancements
 
@@ -16,9 +17,11 @@ The search index is built with [bleve](https://github.com/blevesearch/bleve) (si
 - [ ] **improved document mappings** to include more relevant metadata fields and with appropriate weighting
 - [ ] **add more info to search page**
 
-#### Notes
+## For Developers
 
-The current version of the web app is configured to make requests as the user types, but does not have any auto-complete functionality so you may have zero results showing up when you are halfway through typing a given word.
+### Tools used
+* The app is written in [go](https://golang.org/)
+* The search index is built with [bleve](https://github.com/blevesearch/bleve) (similar to a light-weight elasticsearch and written in golang) using metadata extracted from every reachable EIS url (including text extracted with OCR from attached/associated PDFs)
 
 ### Developer setup
 1. Install [Go](https://golang.org/dl/), (make sure your GOPATH [ends up in the right PATH profile](https://github.com/alco/gostart#1-how-do-i-start-writing-go-code))
