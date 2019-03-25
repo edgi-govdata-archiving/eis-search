@@ -1,0 +1,15 @@
+{
+  "format": "json",
+  "qri": "st:0",
+  "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "EIS Pages",
+    "description":
+      "EIS Pages",
+    "type": "array",
+    "items": {
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  }
+}
