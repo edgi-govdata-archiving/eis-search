@@ -40,3 +40,12 @@ This app makes an archive of the EPA's Environmental Impact Statements (EIS) sea
 3. From inside that cloned directory, `go build`. This should make a file called `eis-search`
 4. Run: `./eis-search`
 5. Server is running at http://localhost:8094 (or other port as specified in command line output)
+
+## License & Copyright
+
+Copyright (C) 2019 Environmental Data and Governance Initiative (EDGI)
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3.0.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+See the [`LICENSE`](/LICENSE) file for details.
